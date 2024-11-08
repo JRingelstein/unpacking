@@ -59,7 +59,7 @@ body {
   overflow: hidden;
 }
 
-section {
+section:not(#boxes) {
   left: 3vw;
   position: absolute;
   top: 3vw;
@@ -88,20 +88,20 @@ a:hover {
   transform: scale(1.05);
 }
 
-img {
+#boxes {
   bottom: 1.5em;
   height: auto;
   position: absolute;
   right: 1.5em;
-  width: 40%;
+  width: 50%;
 }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-  img {
-    width: 60%;
+  #boxes {
+    width: 70%;
   }
 }
 @media screen and (max-width: 768px) {
-  img {
-    width: 75%;
+  #boxes {
+    width: 80%;
   }
 }/*# sourceMappingURL=style.css.map */
