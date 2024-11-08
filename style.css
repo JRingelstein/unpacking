@@ -88,7 +88,7 @@ a:hover {
   transform: scale(1.05);
 }
 
-svg {
+img {
   bottom: 1.5em;
   height: auto;
   position: absolute;
@@ -96,12 +96,12 @@ svg {
   width: 40%;
 }
 @media screen and (min-width: 769px) and (max-width: 1200px) {
-  svg {
+  img {
     width: 60%;
   }
 }
 @media screen and (max-width: 768px) {
-  svg {
+  img {
     width: 75%;
   }
 }/*# sourceMappingURL=style.css.map */
