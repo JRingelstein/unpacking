@@ -97,6 +97,9 @@ a:hover {
 }
 #boxes [id^=unboxed],
 #boxes [id^=mayhem],
-#boxes #kallax {
+#boxes #kallax,
+#boxes #unbooks,
+#boxes #unbooks2,
+#boxes #unbooks28 {
   display: none;
 }/*# sourceMappingURL=style.css.map */
