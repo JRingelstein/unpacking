@@ -114,6 +114,12 @@ a {
     bottom: 1.5em;
     height: auto;
     position: absolute;
-    right: 1.5em;
-    width: 100%;
+    left: 1.5em;
+    width: calc(100% - 3em);
+
+    [id^="unboxed"],
+    [id^="mayhem"],
+    #kallax {
+        display: none;
+    }
 }

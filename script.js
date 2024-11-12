@@ -12,18 +12,35 @@
         days = Math.ceil(counter / day);
 
     document.getElementById('counterdays').innerText = days;
-    document.getElementById('unboxed').innerText = "1";
 
-    //declare an array to store images
-    var randomImage = new Array();
-    //0,1,2,3,4,5
-    randomImage[0] = "./img/boxes.svg";
-    randomImage[1] = "./img/boxes1.svg";
-    randomImage[2] = "./img/boxes2.svg";
+    let unboxed = 1;
 
-    // genrate a number and provide to genrate image accordingly
-    var number = Math.floor(Math.random() * randomImage.length);
-    // return the images which are genrated
-    return document.getElementById('boxes').innerHTML = '<img src="' + randomImage[number] + '" alt="Packed moving boxes" />';
+    document.getElementById('unboxed').innerText = unboxed;
+
+    if (unboxed > 0) {
+        let allBoxes = document.querySelectorAll('[id^="box"]');
+        let i = 1;
+
+        document.getElementById('kallax').style.display = 'block';
+
+
+        allBoxes.forEach(function (box) {
+            var boxId = box.id;
+            var boxNumber = parseInt(boxId.replace('box', ''), 10);
+
+            // Verstecke Elemente, die den Bedingungen entsprechen
+            if (boxNumber <= unboxed) {
+                box.style.display = 'none';
+            }
+        });
+
+        while (i <= unboxed) {
+            document.getElementById('unboxed' + i).style.display = "block";
+            i++
+        }
+    }
+
+    let number = Math.floor(Math.random() * 3);
+    document.getElementById('mayhem' + number).style.display = 'block';
 
 })();

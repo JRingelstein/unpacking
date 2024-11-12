@@ -92,6 +92,11 @@ a:hover {
   bottom: 1.5em;
   height: auto;
   position: absolute;
-  right: 1.5em;
-  width: 100%;
+  left: 1.5em;
+  width: calc(100% - 3em);
+}
+#boxes [id^=unboxed],
+#boxes [id^=mayhem],
+#boxes #kallax {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
