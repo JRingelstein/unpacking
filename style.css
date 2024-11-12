@@ -93,15 +93,5 @@ a:hover {
   height: auto;
   position: absolute;
   right: 1.5em;
-  width: 50%;
-}
-@media screen and (min-width: 769px) and (max-width: 1200px) {
-  #boxes {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 768px) {
-  #boxes {
-    width: 80%;
-  }
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

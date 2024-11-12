@@ -115,13 +115,5 @@ a {
     height: auto;
     position: absolute;
     right: 1.5em;
-    width: 50%;
-
-    @media screen and (min-width: 769px) and (max-width: 1200px) {
-        width: 70%;
-    }
-
-    @media screen and (max-width: 768px) {
-        width: 80%;
-    }
+    width: 100%;
 }

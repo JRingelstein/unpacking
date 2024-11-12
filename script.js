@@ -12,7 +12,7 @@
         days = Math.ceil(counter / day);
 
     document.getElementById('counterdays').innerText = days;
-    document.getElementById('unboxed').innerText = "0";
+    document.getElementById('unboxed').innerText = "1";
 
     //declare an array to store images
     var randomImage = new Array();
