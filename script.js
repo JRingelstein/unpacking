@@ -7,11 +7,15 @@
 
     const
         movingDay = new Date('2024-11-04T23:59:59'),
+        internetDay = new Date('2024-11-22T08:59:59'),
         now = new Date(),
-        counter = now.getTime() - movingDay.getTime(),
-        days = Math.ceil(counter / day);
+        movingCounter = now.getTime() - movingDay.getTime(),
+        movingDays = Math.ceil(movingCounter / day),
+        internetCounter = internetDay.getTime() - now.getTime(),
+        internetDays = Math.ceil(internetCounter / day);
 
-    document.getElementById('counterdays').innerText = days;
+    document.getElementById('counterdays').innerText = movingDays;
+    document.getElementById('internetdays').innerText = internetDays;
 
     let unboxed = 9;
 
