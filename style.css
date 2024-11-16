@@ -51,12 +51,22 @@
   margin: 0;
 }
 
-body {
+html {
   background: #e1dcf2;
   color: #432c82;
   font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-size: 16px;
   overflow: hidden;
+}
+
+.night {
+  background: #432c82;
+  color: #e1dcf2;
+}
+
+.transitional {
+  background: #9c8add;
+  color: #432c82;
 }
 
 section:not(#boxes) {
@@ -66,7 +76,6 @@ section:not(#boxes) {
 }
 
 h1 {
-  color: #432c82;
   font-family: "Space Mono", "Courier New", monospace;
   font-style: italic;
   font-size: calc(16px + 3.5vh);

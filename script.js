@@ -8,16 +8,34 @@
     const
         movingDay = new Date('2024-11-04T23:59:59'),
         internetDay = new Date('2024-11-22T08:59:59'),
-        now = new Date(),
-        movingCounter = now.getTime() - movingDay.getTime(),
+        today = new Date(),
+        now = new Date().getHours(),
+        movingCounter = today.getTime() - movingDay.getTime(),
         movingDays = Math.ceil(movingCounter / day),
-        internetCounter = internetDay.getTime() - now.getTime(),
+        internetCounter = internetDay.getTime() - today.getTime(),
         internetDays = Math.ceil(internetCounter / day);
+
+    const randomMayhem = () => {
+        let number = Math.floor(Math.random() * 3);
+        document.getElementById('mayhem' + number).style.display = 'block';
+    }
 
     document.getElementById('counterdays').innerText = movingDays;
     document.getElementById('internetdays').innerText = internetDays;
 
-    let unboxed = 9;
+    if (now > 16) {
+        document.documentElement.classList.add('night');
+        document.getElementById('mayhem0').style.display = 'block';
+    }
+    else if (now > 14 || now < 10) {
+        document.documentElement.classList.add('transitional');
+        randomMayhem();
+    }
+    else {
+        randomMayhem();
+    }
+
+    let unboxed = 10;
 
     document.getElementById('unboxed').innerText = unboxed;
 
@@ -43,8 +61,4 @@
             i++
         }
     }
-
-    let number = Math.floor(Math.random() * 3);
-    document.getElementById('mayhem' + number).style.display = 'block';
-
 })();

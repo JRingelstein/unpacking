@@ -72,12 +72,22 @@ $heading: 'Space Mono', 'Courier New', monospace;
     margin: 0;
 }
 
-body {
+html {
     background: $light-purple;
     color: $primary-purple;
     font-family: $copy;
     font-size: $base-size;
     overflow: hidden;
+}
+
+.night {
+    background: $primary-purple;
+    color: $light-purple;
+}
+
+.transitional {
+    background: $secondary-purple;
+    color: $primary-purple;
 }
 
 section:not(#boxes) {
@@ -87,7 +97,6 @@ section:not(#boxes) {
 }
 
 h1 {
-    color: $primary-purple;
     font-family: $heading;
     font-style: italic;
     font-size: calc($base-size + 3.5vh);
