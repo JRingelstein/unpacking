@@ -26,10 +26,13 @@
     if (now > 16) {
         document.documentElement.classList.add('night');
         document.getElementById('mayhem0').style.display = 'block';
+        document.getElementById('lampe').setAttribute('filter', 'url(#nightGlow)')
     }
     else if (now > 14 || now < 10) {
         document.documentElement.classList.add('transitional');
         randomMayhem();
+        document.getElementById('lampe').setAttribute('filter', 'url(#softGlow)')
+
     }
     else {
         randomMayhem();
