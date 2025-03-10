@@ -7,13 +7,10 @@
 
     const
         movingDay = new Date('2024-11-04T23:59:59'),
-        internetDay = new Date('2024-11-22T08:59:59'),
         today = new Date(),
         now = new Date().getHours(),
         movingCounter = today.getTime() - movingDay.getTime(),
-        movingDays = Math.ceil(movingCounter / day),
-        internetCounter = internetDay.getTime() - today.getTime(),
-        internetDays = Math.ceil(internetCounter / day);
+        movingDays = Math.ceil(movingCounter / day);
 
     const randomMayhem = () => {
         let number = Math.floor(Math.random() * 3);
@@ -21,7 +18,6 @@
     }
 
     document.getElementById('counterdays').innerText = movingDays;
-    document.getElementById('internetdays').innerText = internetDays;
 
     if (now > 16) {
         document.documentElement.classList.add('night');
@@ -38,9 +34,10 @@
         randomMayhem();
     }
 
-    let unboxed = 13;
+    let unboxed = 22;
+    let toUnbox = 11;
 
-    document.getElementById('unboxed').innerText = unboxed;
+    document.getElementById('unboxed').innerText = toUnbox;
 
     if (unboxed > 0) {
         let allBoxes = document.querySelectorAll('[id^="box"]');
